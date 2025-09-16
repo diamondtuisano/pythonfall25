@@ -31,4 +31,3 @@ else:
 
 #final words
 print("Their grade is", str(grade))
-
