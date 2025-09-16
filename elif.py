@@ -27,7 +27,8 @@ elif grade >= 60:
 
 #failing grade
 else:
-   print("The letter grade is F."
+   print("The letter grade is F.")
 
 #final words
 print("Their grade is", str(grade))
+
