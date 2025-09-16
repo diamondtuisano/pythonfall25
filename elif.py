@@ -7,20 +7,27 @@ Check to see if the number given is between 0 and 100.
 
 """
 
-# Define a function to calculate buffet price based on age
-# Get the customer's age
-age = int(input("How old is the customer?  "))
-# Check if age is less than 1
-if age < 1:
-    price = 0.00  # Buffet is free for children under 1
-# Check if age is between 1 and 12
-elif age < 12:
-    price = age * 1.00  # Charge $1 for each year of age
-# Check if age is 12 or older but less than 65
-elif age < 65:
-    price = 16.95  # Standard adult price
-# Age is 65 or older
-else:
-    price = 12.95  # Senior discount price
+#define a function to calculate the grade
+#get the student's grade
+grade = int(input("What is their grade? "))
 
-print("The cost will be:  $", str(price))
+#check if grade is less than 0 or more than 100
+if grade < 0 or grade > 100
+    print("Invalid. Please enter a grade between 0 and 100.")
+
+#grade breakdown based on grading scale in chunks of 10
+elif grade >= 90:
+   print("The letter grade is A.")
+elif grade >= 80:
+   print("The letter grade is B.")
+elif grade >= 70:
+   print("The letter grade is C.")
+elif grade >= 60:
+   print("The letter grade is D.")
+
+#failing grade
+else:
+   print("The letter grade is F."
+
+#final words
+print("Their grade is", str(grade))
