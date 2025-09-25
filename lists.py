@@ -22,14 +22,14 @@ my_steps = []
 #range and input from user
 for day in days:
    in_steps = int(input(f"How many steps did you take on {day}? "))
-   my_steps = my_steps.append(in_steps) #store steps
-   print(f"{day} you walked {in_steps} steps.")
+   my_steps.append(in_steps) #store steps
 
-for steps in my_steps:
-    print(steps)
-    total = total + steps
+for i in range (0, 7):
+    print(f"{days[i]} you walked {my_steps[i]} steps.")
+
+total = sum(my_steps)
 
 #pulls out of for loop
 print(f"Total steps: {total}")
 
-print(f"Average steps: {total / len(steps): .2f}")
+print(f"Average steps: {total / len(days): .2f}")
