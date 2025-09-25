@@ -8,20 +8,24 @@ Print both the sorted and reversed lists.
 
 """
 
-#prompt the user to enter five names
-str(print(input(f"Enter five names: ")))
+#prompt user to enter five names and store it in a list
+names = []
+for i in range(5):
+    name = input(f"Enter name {i+1}: ")
+    names.append(name)
 
-for range i in names
-
-
-
-#empty list
-names = [input]
+#bubble sort
 swapped = True
 while swapped:
     swapped = False
-    for i in range(len(names) -1):
+    for i in range(len(names)-1):
         if names[i] > names[i + 1]:
-            names[i], names[i + 1] = names [i +1], names[i]
+            names[i], names[i + 1] = names[i + 1], names[i]
             swapped = True
-print(names)
+
+#print sorted list
+print(f"Sorted list: ", names)
+
+#reverse sorted list
+names.reverse()
+print(f"Reversed list: ", names)
