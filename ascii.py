@@ -69,11 +69,11 @@ def int_ascii(): #define the integer value with corresponding ascii function
 
 def main(): #define main
     print(f"[Convert ASCII single-charcter value to integer] ") #print first step of assignment
-    chr_ascii() #returns 'ascii_value'; single character as a number
+    chr_ascii() #calls function to get single character as an integer
 
     print(f"[Convert integer ASCII value to character]") #print second step of assignment
-    int_ascii() #returns 'character'; integer as a single character
+    int_ascii() #calls function to get integer as a single character
 
     print(f"Thanks for using the ASCII converter!") #print exit message
 
-main() #call main
+main() #call main and allows program to run
