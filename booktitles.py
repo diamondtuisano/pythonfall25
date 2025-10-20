@@ -34,7 +34,7 @@ def main(): #define main
     """
     book_titles = [] #empty list of book titles
 
-    print(f"Please enter 10 book titles one at a time\n") #instructions w/each line having a break
+    print(f"Please enter 10 book titles one at a time\n") #instructions w/break after
 
     while len(book_titles) < 10: #while loop; while length of the book titles are less than ten:
         books_needed = 10 - len(book_titles) #books needed is 10 minus each book title; counts down
