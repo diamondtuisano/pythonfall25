@@ -51,7 +51,7 @@ def game(answer, display): #define game function; track guess counts
         else:
             guessed_letters.append(guess) #add new letters to list of guesses
 
-        bad_guess = True #if it's a bad guess...
+        bad_guess = True #assumes if it's a bad guess...
         for i in range(len(answer)): #loops through length of hangman word
             if guess == answer[i]:
                 display[i] = guess 
