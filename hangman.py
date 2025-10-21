@@ -26,7 +26,7 @@ import random
 WORD_LIST = ("DOG", "CAT", "MONKEY", "GOAT","LIZARD","PIG","BIRD",
              "SNAKE","BEAR","SPIDER","FISH","HAMSTER","TURTLE","CHICKEN","HORSE")
 
-def game(answer, display): #define game function; wrong and right answers start at 0
+def game(answer, display): #define game function; track guess counts
     wrong = 0 
     right = 0
 
@@ -37,33 +37,33 @@ def game(answer, display): #define game function; wrong and right answers start 
 
     guessed_letters = [] #list of guessed letters
 
-    while True: #while loop
-        for item in display: #display letter _ _ _
-            print(item, end=" ") #print the item and end it w/quotes
+    while True: #game loop continues until player wins or loses
+        for item in display: #display current state of word
+            print(item, end=" ") #prints letter or underscore followed by a space
 
         print("\n\n") #print breaks
-        guess = input("Please enter a letter: ").upper() #get user input turn into uppercase
+        guess = input("Please enter a letter: ").upper() #get user input convert to uppercase
 
-        #check if already guessed
+        #check if already guessed in list
         if guess in guessed_letters:
             print("You already guessed that letter!") #print already guessed message
-            continue #continue game while loop
+            continue #skips current loop and goes to game loop, asking for another guess
         else:
-            guessed_letters.append(guess) #add guessed letters to list of guesses
+            guessed_letters.append(guess) #add new letters to list of guesses
 
         bad_guess = True #if it's a bad guess...
-        for i in range(len(answer)): #
+        for i in range(len(answer)): #loops through length of hangman word
             if guess == answer[i]:
                 display[i] = guess 
                 right += 1 #right guesses increase by one
-                bad_guess = False #bad guesses are false
+                bad_guess = False #letter was found so mark as correct
 
-        if bad_guess:
-            print("Wrong!")
+        if bad_guess: #assumes guess is wrong until proven correct
+            print("Wrong!") #prints incorrect guess message
             wrong += 1 #wrong guesses increase by one
-            print(f"You have {len(wrong)} guesses left!") #print number of guesses left
+            print(f"You have {5 - wrong} guesses left!") #print number of guesses left
 
-        if wrong > 5: #if the number of wrong guesses are greater than 5
+        if wrong >= 5: #if the number of wrong guesses are greater than or equal to 5
             print("You Lose!") #prints losing message
             print("The correct word was:", answer) #prints correct answer
             break #ends loop after wrong guesses max is met
