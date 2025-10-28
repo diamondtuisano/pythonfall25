@@ -12,53 +12,57 @@ link on Canvas.
 """
 def main(): #define main function
     print(f"\nDetermine which generation you are (according to Google)!\n")
-    user_year = print(int(input(f"Enter, in 4 digits, your birth year: ")))
-    user_gen = ("GI Generation (1901-1927)", "Silent Generation (1928-1945)", 
-                "Baby Boom Generation (1946-1964)", "Generation X (1965-1980)",
-                "Millenial/Gen Y (1981-1996)", "Gen Z/iGen (1997-2010)", 
-                "Gen Alpha (2010-2024)", "Gen Beta (2025-2039)")
-
     
-    
-    if user_year < 2040:
-        print(f"You're a baby, or just a thought, depending what end of the specturm.")
-        print(user_gen.index(7))
-
-    elif user_year < 2025:
-        print(f"You're basically an infant.")
-        print(user_gen.index(6))
-
-    elif user_year < 2011:
-        print(f"You're probably cool.")
-        print(user_gen.index(5))
-
-    elif user_year < 1997:
-        print(f"You're probably a little old.")
-        print(user_gen.index(4))
-
-    elif user_year < 1981:
-        print(f"You're pretty old.")
-        print(user_gen.index(3))
-
-    elif user_year < 1965:
-        print(f"Someone call the museum. They're missing a dinosaur!")
-        print(user_gen.index(2))
-        
-    elif user_year < 1946:
-        print(f"Shhh...")
-        print(user_gen.index(1))
-
-    elif user_year < 1928:
-        print(f"Somebody call the army.")
-        print(user_gen.index(0))
-
-    else:
-        print(f"Invalid input.")
-
     try: #account for errors
-        if len(user_year) == 4:
-            print(user_gen)
+    
+        user_year = (int(input(f"Enter, in 4 digits, your birth year: "))) #user input
+
+        user_gen = ["GI Generation (1901-1927)", 
+                    "Silent Generation (1928-1945)",
+                    "Baby Boom Generation (1946-1964)", 
+                    "Generation X (1965-1980)",
+                    "Millenial/Gen Y (1981-1996)", 
+                    "Gen Z/iGen (1997-2009)", 
+                    "Gen Alpha (2010-2024)", 
+                    "Gen Beta (2025-2039)"] #list of user generations
+    
+        if user_year == 0: #in case they input 0
+            print(100/user_year) #purposefully check for a ZeroDivisionError
+
+        if user_year >= 2025 and user_year <= 2039: #Gen Beta
+            print(user_gen[7]) #index numer 7 for item in list
+
+        elif user_year >= 2010 and user_year <= 2024: #Gen Alpha
+            print(user_gen[6]) #index numer 6 for item in list
+
+        elif user_year >= 1997 and user_year <= 2009: #Gen Z/iGen
+            print(user_gen[5]) #index numer 5 for item in list
+
+        elif user_year >= 1981 and user_year <= 1996: #Millenial/Gen Y
+            print(user_gen[4]) #index numer 4 for item in list
+
+        elif user_year >= 1965 and user_year <= 1980: #Generation X
+            print(user_gen[3]) #index numer 3 for item in list
+
+        elif user_year >= 1946 and user_year <= 1964: #Baby Boom Generation
+            print(user_gen[2]) #index numer 2 for item in list
+        
+        elif user_year >= 1928 and user_year <= 1945: #Silent Generation
+            print(user_gen[1]) #index numer 1 for item in list
+
+        elif user_year >= 1901 and user_year <= 1927: #GI Generation
+            print(user_gen[0]) #index numer 0 for item in list
+
+        else:
+            print(f"{user_year} does not fall between 1901 and 2039.") #catch years outside of available list
+
     except ValueError: #potentional value error if input is not a number
-        print(f"Input invalid. Please input a 4-digit number!")
+        print(f"Invalid input. Please input a 4-digit number!")
+
+    except ZeroDivisionError: #potential zerodivion error if input is 0
+        print(f"Please enter a birth year greater than 0.")
+
+    except Exception as e:
+        print(f"An unexpected error occurred {e}.")
 
 main() #call main
