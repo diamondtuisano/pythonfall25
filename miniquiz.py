@@ -62,7 +62,7 @@ def main(): #define main function
     except ZeroDivisionError: #potential zerodivion error if input is 0
         print(f"Please enter a birth year greater than 0.")
 
-    except Exception as e:
-        print(f"An unexpected error occurred {e}.")
+    except Exception as e: #define specifically what is in the error
+        print(f"An unexpected error occurred {e}.") 
 
 main() #call main
