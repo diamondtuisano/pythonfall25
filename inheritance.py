@@ -75,17 +75,16 @@ def main():
     """user input w/employee info"""
     print(f"\nEnter the following information for the Employee\n")
     
-    name_input = input("Enter Employee Name: ")
-    number_input = input("Enter Employee Number: ")
-    pay_rate_input = float(input("Enter Pay Rate: ")) #converts to float
-    shift_input = int(input("Enter Shift Number (1 for Days, 2 for Nights): ")) #converts to int
+    name_input = str(input("Enter Employee Name: "))
+    number_input = int(input("Enter Employee Number: "))
+    pay_rate_input = float(input("Enter Pay Rate: ")) 
+    shift_input = int(input("Enter Shift Number (1 for Days, 2 for Nights): ")) 
     
+    worker = ProductionWorker(name_input, number_input, shift_input, pay_rate_input)
+
     """ create an instance of ProductionWorker w/all data"""
-    try:
-        worker = ProductionWorker(name_input, number_input, shift_input, pay_rate_input)
-    except Exception as e: #catches main logic errors
-        print(f"\nError with creating worker object: {e}")
-        return
+    
+    worker1 = ProductionWorker("Diamond", 35, 15.75, 1)
 
     """display the data using the object's methods; get"""
     
