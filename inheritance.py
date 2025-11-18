@@ -82,11 +82,8 @@ def main():
     
     worker = ProductionWorker(name_input, number_input, shift_input, pay_rate_input)
 
-    """ create an instance of ProductionWorker w/all data"""
-    
-    worker1 = ProductionWorker("Diamond", 35, 15.75, 1)
-
-    """display the data using the object's methods; get"""
+    """ create an instance of ProductionWorker w/all data;
+    display the data using the object's methods; get"""
     
     print(f"-------------------------------------------")
     print(f"Employee Details: ")
