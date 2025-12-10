@@ -10,8 +10,8 @@ Menu Item.py
 
 class Menu_Item:
     """ represents single item on menu with category and prices for small, medium, and large"""
-
-    CATEGORIES = ['Drinks', 'Bakery', 'Food']
+    #class attribute for defining and storing following categories
+    CATEGORIES = ['Drinks', 'Bakery', 'Food'] 
 
     def __init__(self,category, name, price_small, price_medium, price_large):
         self.__category = category.strip().lower()
