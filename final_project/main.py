@@ -7,6 +7,40 @@ Cafe Ordering System
     8/19/2025-12/13/2025
     Date: 12/09/2025
 
+To earn an “A” on the final project, your program must meet all of the following:
+
+Object-Oriented Design:
+At least two custom classes with attributes and methods.
+Objects are used to manage data and actions in your program (not just defined and ignored).
+Program Structure & Logic:
+Uses functions and classes to organize the program into logical sections.
+Includes at least one loop for repeated actions (e.g., menu, multiple entries).
+Includes conditional statements (if/elif/else) to handle choices and branches.
+Error Handling & Validation:
+Uses input validation for user entries (e.g., non-numeric values, out-of-range options).
+Includes at least one meaningful try/except block for anticipated errors (e.g., file issues, bad input).
+File Input/Output (Text Files):
+Reads from at least one external text file (e.g., menu, configuration, data list).
+Writes to at least one external text file (e.g., receipt, log, report).
+Uses clear filenames and simple, readable text formats (CSV-style or line-by-line are both fine).
+Calculations & Output:
+Performs at least one non-trivial calculation (e.g., totals, tax, discounts, scores, averages).
+Displays formatted output that is easy for a user to read in the console.
+Documentation & Readability: :contentReference[oaicite:1]{index=1}
+Includes a top-of-file header docstring in the main file with:
+Full assignment prompt (copied in) as required in this course.
+Student name, course, section, date, and a short description of the project.
+AI use disclosure with link if applicable (see AI policy below).
+Each class and function includes a docstring describing:
+What it does.
+Key parameters (if any).
+Return value (or “None” if it just prints or updates state).
+Inline comments mark each logical section of the program.
+Consistent, readable naming (no single-letter names except for simple loop counters).
+User Experience & Creativity:
+Text-based interface is clear and easy to follow (menus, prompts, labels).
+Shows effort in theme, story, or presentation (even with a simple console UI).
+
 Program flow:
 
     imports menu, menu items, and order classes
@@ -41,9 +75,9 @@ def main():
     cafe_menu_official.display_menu()
 
     #order setup details + create a CafeOrder object
-    customer_name = input("\nEnter your name: ").strip()
-    order_number = 1
-    current_order = Cafe_Order(customer_name, order_number)
+    customer_name = input("\nEnter your name: ").strip() #strips customer name
+    order_number = 1 #gives order number 1
+    current_order = Cafe_Order(customer_name, order_number) #stores current order for receipt using Cafe_Order Class
 
     #order loop
     print("\nStart your order")
