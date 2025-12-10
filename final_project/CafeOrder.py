@@ -22,13 +22,13 @@ class Cafe_Order:
 
     def add_item(self, menu_item_object, size, quantity):
             """ adds a menu item to the order list and updates the total cost """
-            try:
-                quantity = int(quantity)
+            try: #catches errors
+                quantity = int(quantity) #turns quantity into integer
             except ValueError:
                 print("Error: Quantity must be a whole number.")
                 return
 
-            size_item = size.strip().lower()
+            size_item = size.strip().lower() #strips size item and makes it lowercase
             price_per_item = 0.0 #initialized at 0
 
             #correct price based on size of item
