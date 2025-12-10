@@ -1,0 +1,15 @@
+Drinks,House Coffee,2.50,3.00,3.50
+Drinks,Iced Coffee,3.00,3.50,4.00
+Drinks,Herbal Tea,2.75,3.25,3.75
+Drinks,Chai Latte,3.75,4.25,4.75
+Drinks,Hot Chocolate,3.25,3.75,4.25
+Drinks,Fresh Lemonade,3.00,3.50,4.00
+Bakery,Croissant,2.75,3.25,3.75
+Bakery,Blueberry Muffin,2.50,3.00,3.50
+Bakery,Banana Bread Slice,2.75,3.25,3.75
+Bakery,Chocolate Chip Cookie,1.75,2.25,2.75
+Bakery,Cinnamon Roll,3.25,3.75,4.25
+Food,Grilled Veggie Sandwich,6.50,7.00,7.50
+Food,Turkey Club Sandwich,7.00,7.50,8.00
+Food,Tomato Basil Soup,4.50,5.00,5.50
+Food,Garden Salad,5.50,6.00,6.50
